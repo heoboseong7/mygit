@@ -23,7 +23,7 @@ int main()
 
 	for (int i = 0; i < n; i++)
 		for (int j = rec[i].sa; j < rec[i].ea; j++)
-			for (int k = rec[i].eb; k < rec[i].eb; k++)
+			for (int k = rec[i].sb; k < rec[i].eb; k++)
 				space[j][k] = 1;
 
 	for (int i = 0; i < 500; i++)
