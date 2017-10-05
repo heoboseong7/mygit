@@ -1,110 +1,85 @@
 #define CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-/*
-int compare(int a, int n, int *plug, int *tempplug, int ncnt)
+int max(int a[], int n)
 {
-	int tf = 0;
-
-	for (int j = 0; j < ncnt; j++)
-		if (tempplug[j] == a)
-			return 0;
-		else
-			tf++;
-
-	if (tf == ncnt)
-		for (int i = 0; i < n; i++)
-			if (plug[i] == a)
-				return 0;
-
-	return 1;
+	int max = 0;
+	int maxt = a[0];
+	for (int i = 1; i < n; i++)
+		if (maxt < a[i])
+		{
+			maxt = a[i];
+			max = i;
+		}
+	return max;
 }
-*/
-int compare2(int a, int n, int *plug)
-{	
-	for (int i = 0; i < n; i++)
-		if (plug[i] == a)
-			return i;
 
-	return 0;
+int find(int* name, int n, int plug, int k)
+{
+	int min;
+		for (int i = n; i < k; i++)
+			if (plug == name[i])
+				return i;
+
+	return 200;
+}
+
+int cmp(int a, int plug[], int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (a == plug[i])
+			return 0;
+	}
+	return 1;
 }
 
 int main()
 {
 	int n, k;
 	int cnt = 1;
-	int ncnt = 0;
 	int i, j = 0;
-	int plug[21] = { 0 };
-	int tempplug[21] = { 0 };
-	int name[101] = { 0 };
-	//int same[21]
+	int plug[101] = { 0 };
+	int nplug[101] = { 0 };
 
 	scanf("%d %d", &n, &k);
 
+	int name[101] = { 0 };
 	for (i = 0; i < k; i++)
 		scanf("%d", name + i);
 
 	// 첫번째 플러그 값 받기
 	plug[0] = name[0];
 
-	// 초기값 n개 설정
 	while (cnt != n)
 	{
-		for (i = 0; i < cnt; i++)
+		if (cmp(name[j], plug, cnt))
 		{
-
-			if (plug[i] != name[j])
-			{
-				plug[cnt++] = name[j++];
-				break;
-			}
-			j++;
+			plug[cnt] = name[j];
+			cnt++;
 		}
+		j++;
 	}
 
 	//카운트 초기화
 	cnt = 0;
-	/*
-	for (i = n - 1; i < k; i++)
+
+	for (i = j; i < k; i++)
 	{
-		if (compare(name[i], n, plug, tempplug, ncnt))
+		if (cmp(name[i], plug, n))
 		{
-			tempplug[ncnt] = name[i];
-			ncnt++;
-			cnt++;
-			if (ncnt == n)
+			for (int m = 0; m < n; m++)
 			{
-				while (ncnt--)
-				{
-					plug[n - ncnt - 1] = tempplug[n - ncnt - 1];
-					tempplug[n - ncnt - 1] = 0;
-				}
-				ncnt = 0;
+				nplug[m] = find(name, i + 1, plug[m], k);
 			}
-		}
-	}
-	*/
 
-	for (i = n - 1; i < k; i++)
-	{
-		if (compare2(name[i], n, plug) == 0)
-		{
+			plug[max(nplug, n)] = name[i];
 			cnt++;
-			for (j = i + 1; j < i + n; j++)
-				if (compare2(name[j], ncnt, plug) != 0)
-					tempplug[ncnt++] = compare2(name[j], ncnt, plug);
-				else
-					cnt++;
-
-			for (j = 0; j < n; j++)
-				if (tempplug[j] == 0)
-					plug[j] = name[tempplug[j]];
-
-			i += n - 1;
 		}
 	}
-	printf("%d", cnt);
 
+	printf("%d", cnt);
 	return 0;
 }

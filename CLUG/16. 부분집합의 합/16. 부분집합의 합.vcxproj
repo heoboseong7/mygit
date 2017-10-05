@@ -92,6 +92,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <StackReserveSize>90000000</StackReserveSize>
+      <StackCommitSize>90000000</StackCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

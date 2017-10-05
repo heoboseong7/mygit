@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01. 나누기", "CLUG 알고리즘반\CLUG 알고리즘반.vcxproj", "{59C658A4-5054-4491-9037-B9330857704A}"
 EndProject
@@ -34,8 +34,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "16. 부분집합의 합", "16. 부분집합의 합\16. 부분집합의 합.vcxproj", "{8C02471C-FD22-40F3-9566-879932D6D45C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15. 멀티탭 스케쥴러", "15. 멀티탭 스케쥴러\15. 멀티탭 스케쥴러.vcxproj", "{095738C1-6832-4F7A-8D79-B4D7A5A4C79E}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15. 멀티탭 2222", "15. 멀티탭 2222\15. 멀티탭 2222.vcxproj", "{FF1C102F-F24C-4334-A39E-C957EDC5242A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,19 +171,8 @@ Global
 		{095738C1-6832-4F7A-8D79-B4D7A5A4C79E}.Release|x64.Build.0 = Release|x64
 		{095738C1-6832-4F7A-8D79-B4D7A5A4C79E}.Release|x86.ActiveCfg = Release|Win32
 		{095738C1-6832-4F7A-8D79-B4D7A5A4C79E}.Release|x86.Build.0 = Release|Win32
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Debug|x64.ActiveCfg = Debug|x64
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Debug|x64.Build.0 = Debug|x64
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Debug|x86.ActiveCfg = Debug|Win32
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Debug|x86.Build.0 = Debug|Win32
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Release|x64.ActiveCfg = Release|x64
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Release|x64.Build.0 = Release|x64
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Release|x86.ActiveCfg = Release|Win32
-		{FF1C102F-F24C-4334-A39E-C957EDC5242A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D14C42A2-E474-4209-B85E-B80B5A483B4F}
 	EndGlobalSection
 EndGlobal
