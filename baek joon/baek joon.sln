@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "대회 or 인턴", "대회 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "롤러코스터", "롤러코스터\롤러코스터.vcxproj", "{2CDD8B7F-BEDF-4B01-B595-20271367B006}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "로프", "로프\로프.vcxproj", "{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{2CDD8B7F-BEDF-4B01-B595-20271367B006}.Release|x64.Build.0 = Release|x64
 		{2CDD8B7F-BEDF-4B01-B595-20271367B006}.Release|x86.ActiveCfg = Release|Win32
 		{2CDD8B7F-BEDF-4B01-B595-20271367B006}.Release|x86.Build.0 = Release|Win32
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Debug|x64.ActiveCfg = Debug|x64
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Debug|x64.Build.0 = Debug|x64
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Debug|x86.ActiveCfg = Debug|Win32
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Debug|x86.Build.0 = Debug|Win32
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Release|x64.ActiveCfg = Release|x64
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Release|x64.Build.0 = Release|x64
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Release|x86.ActiveCfg = Release|Win32
+		{FC552E9B-0ED8-4EA6-998E-1C26DEAD1426}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
