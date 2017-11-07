@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "실습01 swap", "2학기실습\2학기실습.vcxproj", "{223415B3-5391-4306-B90D-4973B9CA54C2}"
 EndProject
@@ -42,6 +42,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "실습17", "실습17\실습17.vcxproj", "{BA6831FB-5447-45CD-B1E7-E1A6E90C61D8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "실습18", "실습18\실습18.vcxproj", "{87E0FB65-B083-4E8C-AA02-B890CA5FBE53}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "실습19", "실습19\실습19.vcxproj", "{729FC964-73D9-4151-9DA0-D8DDBD71F829}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "실습20", "실습20\실습20.vcxproj", "{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "실습21", "실습21\실습21.vcxproj", "{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -211,6 +217,30 @@ Global
 		{87E0FB65-B083-4E8C-AA02-B890CA5FBE53}.Release|x64.Build.0 = Release|x64
 		{87E0FB65-B083-4E8C-AA02-B890CA5FBE53}.Release|x86.ActiveCfg = Release|Win32
 		{87E0FB65-B083-4E8C-AA02-B890CA5FBE53}.Release|x86.Build.0 = Release|Win32
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Debug|x64.ActiveCfg = Debug|x64
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Debug|x64.Build.0 = Debug|x64
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Debug|x86.ActiveCfg = Debug|Win32
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Debug|x86.Build.0 = Debug|Win32
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Release|x64.ActiveCfg = Release|x64
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Release|x64.Build.0 = Release|x64
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Release|x86.ActiveCfg = Release|Win32
+		{729FC964-73D9-4151-9DA0-D8DDBD71F829}.Release|x86.Build.0 = Release|Win32
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Debug|x64.ActiveCfg = Debug|x64
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Debug|x64.Build.0 = Debug|x64
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Debug|x86.ActiveCfg = Debug|Win32
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Debug|x86.Build.0 = Debug|Win32
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Release|x64.ActiveCfg = Release|x64
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Release|x64.Build.0 = Release|x64
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Release|x86.ActiveCfg = Release|Win32
+		{5CFD19B3-791A-4ED8-8BBF-9E34ADE264FC}.Release|x86.Build.0 = Release|Win32
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Debug|x64.ActiveCfg = Debug|x64
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Debug|x64.Build.0 = Debug|x64
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Debug|x86.ActiveCfg = Debug|Win32
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Debug|x86.Build.0 = Debug|Win32
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Release|x64.ActiveCfg = Release|x64
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Release|x64.Build.0 = Release|x64
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Release|x86.ActiveCfg = Release|Win32
+		{DFD7DEFB-0B07-4800-B49E-7495E07DAE4D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
