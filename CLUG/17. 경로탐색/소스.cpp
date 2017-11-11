@@ -19,33 +19,17 @@ void check_Init()
 
 void dfs(int start)
 {
-	int i = 0;
-	bool tf = false;
-	for (i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		if (ary[start][i] == 1)
 			if(check[k][i] == 0)
 			{
 				prevn.push_back(start);
 				check[k][i] += 1;
-				tf = true;
 				dfs(i);
-
 			}
 	}
-
-	if (tf = false)
-	{
-		if (prevn.empty())
-		{
-			return;
-		}
-		else
-		{
-			prevn.pop_back();
-			dfs(prevn.back());
-		}
-	}
+	return;
 }
 int main()
 {
