@@ -29,15 +29,12 @@ bool compare(information a, information b)
 
 bool unioncheck(information start)
 {
-	int temp[2] = { 0 };
-	int temp2[2] = { 0 };
+	int temp[2] = { 0 , 0 };
+	int temp2[2] = { -1, -1 };
 	for (int i = 0; i < Union.size(); i++)
 	{
 		for (int j = 0; j < Union[i].size(); j++)
 		{
-			temp[0] = 0;
-			temp[1] = 0;
-
 			if (Union[i][j] == start.v1)
 			{
 				temp[0]++;
@@ -53,20 +50,48 @@ bool unioncheck(information start)
 				return true;
 			}
 		}
-
-		if (temp[0] == 1)
+		temp[0] = 0;
+		temp[1] = 0;
+	}
+	if (temp2[0] != -1 || temp2[1] != -1)
+	{
+		if (temp2[0] != -1 && temp2[1] == -1)
 		{
 			Union[temp2[0]].push_back(start.v2);
 			return false;
 		}
-		else if (temp[1] == 1)
+		else if (temp2[1] != -1 && temp2[0] == -1)
 		{
 			Union[temp2[1]].push_back(start.v1);
 			return false;
 		}
+		else if (temp2[0] != -1 && temp2[1] != -1)
+		{
+			int n, m;
+			if (temp2[0] > temp2[1])
+			{
+				m = temp2[0];
+				n = temp2[1];
+			}
+			else
+			{
+				n = temp2[0];
+				m = temp2[1];
+			}
+			int k = Union[m].size();
+			for (int i = 0; i < k; i++)
+			{
+				Union[n].push_back(Union[m].back());
+				Union[m].pop_back();
+			}
+			//Union[m].clear();
+			return false;
+		}
 	}
 
-	Union.push_back({start.v1, start.v2});
+	Union.push_back(vector<int>());
+	Union[Union.size() - 1].push_back(start.v1);
+	Union[Union.size() - 1].push_back(start.v2);
 	return false;
 }
 
@@ -93,8 +118,9 @@ int main()
 	cin >> v >> e;
 	for (int i = 0; i < e; i++)
 	{
-		inf.push_back({});
-		cin >> inf[i].v1 >> inf[i].v2 >> inf[i].weight;
+		information temp;
+		cin >> temp.v1 >> temp.v2 >> temp.weight;
+		inf.push_back(temp);
 	}
 
 	sort(inf.begin(), inf.end(), compare);
