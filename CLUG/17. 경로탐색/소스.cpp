@@ -6,7 +6,7 @@ int ary[100][100];
 int check[100][100] = { 0 };
 int n;
 int k;
-vector<int> prevn;
+//vector<int> prevn;
 
 /*
 void check_Init()
@@ -24,7 +24,7 @@ void dfs(int start)
 		if (ary[start][i] == 1)
 			if(check[k][i] == 0)
 			{
-				prevn.push_back(start);
+				//prevn.push_back(start);
 				check[k][i] += 1;
 				dfs(i);
 			}
