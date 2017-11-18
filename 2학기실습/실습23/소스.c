@@ -104,6 +104,7 @@ int main()
 	pnode head = NULL;
 	pnode cur;
 	
+	printf("정수들을 입력해 주세요 : ");
 	while (scanf("%d", &n) != EOF)
 	{
 		cur = create(n);
