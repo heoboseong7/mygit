@@ -10,10 +10,10 @@ typedef struct
 	int weight;
 }information;
 
-bool check[10000] = { false };
-int checkcnt = 0;
+bool check[10001] = { false, };
+int connected = 0;
 vector<information> inf;
-vector<vector<int>> Union;
+int Union[10001] = { (-1), };
 int v, e;
 long long int sum = 0;
 
@@ -26,76 +26,85 @@ bool compare(information a, information b)
 	return 0;
 }
 
-int findunion(int n)
+int findparent(int n)
 {
-	for (int i = 0; i < Union.size(); i++)
-		for (int j = 0; j < Union[i].size(); j++)
-			if (n == Union[i][j])
-				return i;
+	if (Union[n] == -1)
+		return n;
+	else
+		return findparent(Union[n]);
 }
 
-int checkunion(int n, int m)
+void unify(int n, int m)
 {
-	int i = findunion(n), j = findunion(m);
-	if (i == j)
-		return -1;
-	else if (i > j)
-	{
-		int temp = Union[i].size();
-		for (int a = 0; a < temp; a++)
-		{
-			Union[j].push_back(Union[i].back());
-			Union[i].pop_back();
-		}
+	Union[n] = m;
+}
+
+int isunion(int n, int m)
+{
+	if (findparent(n) == findparent(m))
 		return 1;
+	// °°À»½Ã 1
+	else
+		return 0;
+}
+
+int checkfun(bool n, bool m)
+{
+	if (n == false)
+	{
+		if (m == false)
+			return 1;
+		else
+			return 2;
 	}
-	else if (j > i)
+	else
 	{
-		int temp = Union[j].size();
-		for (int a = 0; a < temp; a++)
-		{
-			Union[i].push_back(Union[j].back());
-			Union[j].pop_back();
-		}
-		return 1;
+		if (m == false)
+			return 3;
+		else
+			return 4;
 	}
 }
 
 void kruskal(information start)
 {
-	if (check[start.v1] == false && check[start.v2] == false)
+	switch (checkfun(check[start.v1], check[start.v2]))
 	{
-		check[start.v1] = true; check[start.v2] = true;
-		checkcnt += 2;
-		Union.push_back(vector<int>());
-		Union[Union.size() - 1].push_back(start.v1);
-		Union[Union.size() - 1].push_back(start.v2);
-		sum += start.weight;
-		return;
-	}
-	else if (check[start.v1] == true && check[start.v2] == false)
-	{
-		check[start.v2] = true;
-		checkcnt++;
-		Union[findunion(start.v1)].push_back(start.v2);
-		sum += start.weight;
-		return;
-	}
-	else if (check[start.v1] == false && check[start.v2] == true)
-	{
-		check[start.v1] = true;
-		checkcnt++;
-		Union[findunion(start.v2)].push_back(start.v1);
-		return;
-	}
-	else if (check[start.v1] == true && check[start.v2] == true)
-	{
-		if(checkunion(start.v1, start.v2) == 1);
+	case 1:
 		{
-			checkcnt++;
+			check[start.v1] = true;
+			check[start.v2] = true;
+			connected++;
+			unify(start.v2, start.v1);
 			sum += start.weight;
+			return;
 		}
-		return;
+	case 3:
+		{
+			check[start.v2] = true;
+			connected++;
+			unify(start.v2, start.v1);
+			sum += start.weight;
+			return;
+		}
+	case 2:
+		{
+			check[start.v1] = true;
+			connected++;
+			unify(start.v1, start.v2);
+			sum += start.weight;
+			return;
+		}
+	case 4:
+		{
+			if (isunion(start.v1, start.v2) == 0)
+			{
+				unify(findparent(start.v2), findparent(start.v1));
+				sum += start.weight;
+				connected++;
+			}
+			return;
+		}
 	}
 }
 
@@ -104,6 +113,11 @@ void kruskal(information start)
 int main()
 {
 	cin >> v >> e;
+
+	for (int i = 0; i < 10001; i++)
+	{
+		Union[i] = -1;
+	}
 	for (int i = 0; i < e; i++)
 	{
 		information temp;
@@ -114,7 +128,7 @@ int main()
 	sort(inf.begin(), inf.end(), compare);
 
 	int i = 0;
-	while (checkcnt != v)
+	while (connected != (v - 1))
 	{
 		kruskal(inf[i++]);
 	}

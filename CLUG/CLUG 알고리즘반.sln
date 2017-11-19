@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01. 나누기", "CLUG 알고리즘반\CLUG 알고리즘반.vcxproj", "{59C658A4-5054-4491-9037-B9330857704A}"
 EndProject
@@ -46,6 +46,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21. 최소 스패닝 트리", "21. 최소 스패닝 트리\21. 최소 스패닝 트리.vcxproj", "{5828023B-5C46-495D-A140-961688A37036}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21.2", "21.2\21.2.vcxproj", "{297B632D-E66E-467B-A8BB-019582DC660A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "22. 장갑", "22. 장갑\22. 장갑.vcxproj", "{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -231,8 +233,19 @@ Global
 		{297B632D-E66E-467B-A8BB-019582DC660A}.Release|x64.Build.0 = Release|x64
 		{297B632D-E66E-467B-A8BB-019582DC660A}.Release|x86.ActiveCfg = Release|Win32
 		{297B632D-E66E-467B-A8BB-019582DC660A}.Release|x86.Build.0 = Release|Win32
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Debug|x64.ActiveCfg = Debug|x64
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Debug|x64.Build.0 = Debug|x64
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Debug|x86.ActiveCfg = Debug|Win32
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Debug|x86.Build.0 = Debug|Win32
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Release|x64.ActiveCfg = Release|x64
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Release|x64.Build.0 = Release|x64
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Release|x86.ActiveCfg = Release|Win32
+		{C0739EF8-94F1-4BF9-9DCD-5C8C8B5702F4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91244A25-EAAF-4439-A5F3-DF399A7D3A0E}
 	EndGlobalSection
 EndGlobal

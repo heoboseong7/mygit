@@ -10,8 +10,8 @@ typedef struct
 	int weight;
 }information;
 
-bool check[10000] = { false };
-int checkcnt = 0;
+bool check[10000] = { false, };
+int connected = 0;
 vector<information> inf;
 vector<vector<int>> Union;
 int v, e;
@@ -45,7 +45,7 @@ bool unioncheck(information start)
 				temp[1]++;
 				temp2[1] = i;
 			}
-			if (temp[1] + temp[0] == 2)
+			if ((temp[1] + temp[0]) == 2)
 			{
 				return true;
 			}
@@ -53,8 +53,9 @@ bool unioncheck(information start)
 		temp[0] = 0;
 		temp[1] = 0;
 	}
-	if (temp2[0] != -1 || temp2[1] != -1)
-	{
+
+	//if (temp2[0] != -1 || temp2[1] != -1)
+	//{
 		if (temp2[0] != -1 && temp2[1] == -1)
 		{
 			Union[temp2[0]].push_back(start.v2);
@@ -68,6 +69,7 @@ bool unioncheck(information start)
 		else if (temp2[0] != -1 && temp2[1] != -1)
 		{
 			int n, m;
+
 			if (temp2[0] > temp2[1])
 			{
 				m = temp2[0];
@@ -78,7 +80,9 @@ bool unioncheck(information start)
 				n = temp2[0];
 				m = temp2[1];
 			}
+
 			int k = Union[m].size();
+
 			for (int i = 0; i < k; i++)
 			{
 				Union[n].push_back(Union[m].back());
@@ -87,12 +91,14 @@ bool unioncheck(information start)
 			//Union[m].clear();
 			return false;
 		}
-	}
-
-	Union.push_back(vector<int>());
-	Union[Union.size() - 1].push_back(start.v1);
-	Union[Union.size() - 1].push_back(start.v2);
-	return false;
+	//}
+		else if (temp2[0] == -1 && temp2[1] == -1)
+		{
+			Union.push_back(vector<int>());
+			Union[Union.size() - 1].push_back(start.v1);
+			Union[Union.size() - 1].push_back(start.v2);
+			return false;
+		}
 }
 
 void kruskal(information start)
@@ -103,12 +109,12 @@ void kruskal(information start)
 	if (check[start.v1] == false)
 	{
 		check[start.v1] = true;
-		checkcnt++;
+		connected++;
 	}
 	if (check[start.v2] == false)
 	{
 		check[start.v2] = true;
-		checkcnt++;
+		connected++;
 	}
 	sum += start.weight;
 }
@@ -126,7 +132,8 @@ int main()
 	sort(inf.begin(), inf.end(), compare);
 
 	int i = 0;
-	while (checkcnt != v)
+
+	while (connected != v)
 	{
 		kruskal(inf[i++]);
 	}
