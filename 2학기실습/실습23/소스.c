@@ -8,6 +8,7 @@ struct node
 	int value;
 	struct node *next;
 };
+
 typedef struct node *pnode;
 pnode create(int n)
 {

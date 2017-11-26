@@ -1,2 +1,5 @@
 
 *.idb
+*.ipch
+*.filters
+*.tlog
