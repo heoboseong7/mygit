@@ -1,21 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
 
-int main()
-{
-	int a, b;
-	scanf("%d", &a);
-	scanf("%d", &b);
+int main()	{
+	int n;
+	int sum = 0;
 
-	int c, d = 0, e = 0;
+	scanf("%d", &n);
+	char *num;
+	num = (char *)malloc(sizeof(char) * n + 1);
 
-	for (c = a - 1; c >= 0; c--)
-	{
-		e = b / pow(10, c);
-		d = d + e;
-		b = b - e * pow(10, c);
+	scanf("%s", num);
+	for (int i = 0; i < n; i++)	{
+		if (num[i] > 47 && num[i] < 58)
+			sum += num[i] - 48;
 	}
-	
-	printf("%d\n", d);
+
+	printf("%d", sum);
+
+	free(num);
+	return 0;
 }
