@@ -41,3 +41,20 @@ void reverse(int arr[], int start, int end)
 		arr[end - i] = temp;
 	}
 }
+
+void _reverse(int arr[], int d, int n)
+{
+	if (d > 0)
+	{
+		reverse(arr, n - d, n - 1);
+		reverse(arr, 0, n - 1 - d);
+		reverse(arr, 0, n - 1);
+	}
+	else if (d < 0)
+	{
+		d = -d;
+		reverse(arr, 0, d - 1);
+		reverse(arr, d, n - 1);
+		reverse(arr, 0, n - 1);
+	}
+}
