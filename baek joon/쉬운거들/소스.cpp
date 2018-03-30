@@ -1,15 +1,13 @@
 #include <iostream>
-#include <cstring>
 
 using namespace std;
 
 int main() {
-	char arr[1001];
-	cin >> arr;
-	for (int i = 0; i < strlen(arr); i++) {
-		if (i > 0 && i % 10 == 0)
-			cout << endl;
-		cout << arr[i];
-	}
+	int R1, S;
+
+	cin >> R1 >> S;
+
+	cout << S * 2 - R1;
+
 	return 0;
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "baek joon", "baek joon\baek joon.vcxproj", "{527CE373-124F-4CE2-B030-F806807294B2}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "축구게임", "축구게임\축구게임.vcxproj", "{BBAF2EE4-4924-4744-BA77-71DD6E15D10A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "쉬운거들", "쉬운거들\쉬운거들.vcxproj", "{0C074C71-1A1D-4D83-86F3-D840BE33A78A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1011", "1011\1011.vcxproj", "{1C085E8F-4B15-48B2-960D-7BED17AAD273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,14 @@ Global
 		{0C074C71-1A1D-4D83-86F3-D840BE33A78A}.Release|x64.Build.0 = Release|x64
 		{0C074C71-1A1D-4D83-86F3-D840BE33A78A}.Release|x86.ActiveCfg = Release|Win32
 		{0C074C71-1A1D-4D83-86F3-D840BE33A78A}.Release|x86.Build.0 = Release|Win32
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Debug|x64.ActiveCfg = Debug|x64
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Debug|x64.Build.0 = Debug|x64
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Debug|x86.ActiveCfg = Debug|Win32
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Debug|x86.Build.0 = Debug|Win32
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Release|x64.ActiveCfg = Release|x64
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Release|x64.Build.0 = Release|x64
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Release|x86.ActiveCfg = Release|Win32
+		{1C085E8F-4B15-48B2-960D-7BED17AAD273}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
