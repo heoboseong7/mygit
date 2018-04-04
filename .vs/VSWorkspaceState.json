@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\2학기실습",
     "\\2학기실습\\실습12",
-    "\\baek joon\\30",
-    "\\baek joon\\축구게임",
-    "\\CLUG\\16. 부분집합의 합",
-    "\\CLUG\\17. 경로탐색",
-    "\\CLUG\\18. bfs와 dfs",
-    "\\CLUG\\19. 단지번호붙이기"
+    "\\baek joon"
   ],
-  "SelectedNode": "\\2학기실습\\실습12\\소스.c",
+  "SelectedNode": "\\baek joon\\baek joon.sln",
   "PreviewInSolutionExplorer": false
 }

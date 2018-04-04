@@ -5,7 +5,7 @@ public class ex02 {
 		Scanner input = new Scanner(System.in);
 		int a, total = 0;
 		
-		do {
+		while(true) {
 			System.out.print("Input value : ");
 			a = input.nextInt();
 			if(a != 0)	{
@@ -14,7 +14,7 @@ public class ex02 {
 			}
 			else
 				break;
-		}while(true);
+		}
 		
 		System.out.println("End");
 		input.close();
